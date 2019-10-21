@@ -1,0 +1,11 @@
+<form>
+    ${topicNames.map((topic, index) =>         
+        `<label for="">${topic.topic_name}
+            <select>
+                ${skillLevels.map(skill =>
+                    skillsWithRanks[index].rank_name === skill.rank_name ? `<option selected value="">${skill.rank_name}</option>` : `<option value="">${skill.rank_name}</option>`
+                )}
+            </select>
+        </label><br>`
+        ).join('')}
+</form>
